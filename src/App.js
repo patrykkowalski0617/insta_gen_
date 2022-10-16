@@ -1,24 +1,21 @@
-import logo from "./logo.svg";
 import "./App.css";
+import content from "./content";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <article>
+        <div className="inst-container capture">
+          <div className="inst-txt">
+            <div className="user">
+              {console.log(
+                content.filter(({ appVersion }) => appVersion[0] >= 5)
+              )}
+            </div>
+          </div>
+        </div>
+      </article>
+    </>
   );
 }
 
