@@ -1,6 +1,4 @@
-import React, { useRef } from "react";
-import Terminal from "../../Terminal/Terminal";
-import { ContentWrapper } from "./Music.styles";
+import React from "react";
 import diagram from "./diagram";
 import Frame from "./Frame";
 

@@ -6,7 +6,7 @@ export const ContentWrapper = styled.div`
   }
   p {
     margin: 0;
-    padding-top: 15px;
+    padding-top: 13px;
   }
   padding: 0 35px;
   line-height: 1;

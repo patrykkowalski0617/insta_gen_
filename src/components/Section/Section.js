@@ -1,7 +1,6 @@
 import React from "react";
-import { Standard, Music, Avatar } from "../ContentTemplates";
+import { Standard, Music, Avatar, Img } from "../ContentTemplates";
 import { SectionWrapper, Id } from "./Section.styles";
-import Frame from "../../components/ContentTemplates/Music/Frame";
 
 const Section = ({ input }) => {
   const { id, contentTemplate, data } = input;
@@ -11,6 +10,8 @@ const Section = ({ input }) => {
         return <Standard data={data} />;
       case "music":
         return <Music data={data} />;
+      case "img":
+        return <Img data={data} />;
       case "avatar":
         return <Avatar />;
       case "snace_":
