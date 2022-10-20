@@ -10,8 +10,8 @@ import { SectionWrapper, Id } from "./Section.styles";
 
 const Section = ({ input }) => {
   const { id, contentTemplate, data } = input;
-  const renderContent = (param) => {
-    switch (param) {
+  const renderContent = (contentTemplate) => {
+    switch (contentTemplate) {
       case "standard":
         return <Standard data={data} />;
       case "music":
