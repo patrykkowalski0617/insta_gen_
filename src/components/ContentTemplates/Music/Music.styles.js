@@ -21,3 +21,13 @@ export const ContentWrapper = styled.div`
     color: #202420;
   }
 `;
+
+export const LinkToGifPage = styled.a`
+  position: absolute;
+  top: -12px;
+  padding: 0 10px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  left: 55%;
+`;

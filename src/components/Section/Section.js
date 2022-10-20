@@ -1,5 +1,11 @@
 import React from "react";
-import { Standard, Music, Avatar, Img } from "../ContentTemplates";
+import {
+  Standard,
+  Music,
+  Avatar,
+  Img,
+  LargeCenterTxt,
+} from "../ContentTemplates";
 import { SectionWrapper, Id } from "./Section.styles";
 
 const Section = ({ input }) => {
@@ -14,6 +20,8 @@ const Section = ({ input }) => {
         return <Img data={data} />;
       case "avatar":
         return <Avatar />;
+      case "LargeCenterTxt":
+        return <LargeCenterTxt data={data} />;
       case "snace_":
         break;
       default:

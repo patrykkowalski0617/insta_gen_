@@ -19,10 +19,6 @@ body{
   margin: 40px auto;
 }
 
-canvas {
-  margin: auto;
-  display: block;
-}
 
 #capture-mirror > div:last-of-type > div::after {
   color: #202420;
