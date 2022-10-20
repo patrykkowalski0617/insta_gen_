@@ -7,8 +7,8 @@ export const TerminalWrapper = styled.div`
   width: 392px;
   height: 392px;
   font-family: "VT323", monospace;
-  padding: 22px 35px 15px 35px;
-  margin: 10px auto;
+  padding: 22px 0 15px 0;
+  margin: auto;
   position: relative;
   ::before {
     content: ">> Terminal v5.18";
