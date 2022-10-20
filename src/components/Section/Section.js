@@ -1,6 +1,7 @@
 import React from "react";
 import { Standard, Music, Avatar } from "../ContentTemplates";
 import { SectionWrapper, Id } from "./Section.styles";
+import Frame from "../../components/ContentTemplates/Music/Frame";
 
 const Section = ({ input }) => {
   const { id, contentTemplate, data } = input;
