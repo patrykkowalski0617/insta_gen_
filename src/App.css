@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
+  padding: 30px 0;
+  background-color: #ccc;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#canvas-output {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px auto;
+}
+
+
+#capture-mirror > div:last-of-type > div::after {
+  color: #202420;
+}
+
+.inst-container {
+  text-transform: lowercase;
+  background-color: #202420;
+  color: #01d301;
+  width: 392px;
+  height: 392px;
+  font-family: "VT323", monospace;
+  padding: 22px 35px 15px 35px;
+  margin: 10px auto;
+  position: relative;
+}
+
+.inst-container > div:last-of-type > div::after {
+  content: "_";
+}
+
+.inst-container .inst-txt {
+  padding-top: 10px;
+}
+
+.inst-container .user::before {
+  content: "user_msg: ";
+}
+
+.inst-container .date {
+  font-size: 15px;
+  color: #8ea38e;
+}
+
+.inst-container::before {
+  content: "x";
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 10px;
+  color: #8ea38e;
+  text-align: center;
+  width: 14px;
+  height: 14px;
+  border: 1px solid;
+  right: 4px;
+  top: 3px;
+  z-index: 1;
+}
+
+.inst-container::after {
+  content: ">> Terminal v5.18";
+  height: 22px;
+  background-color: #333a33;
+  margin-left: -10px;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #8ea38e;
+  position: absolute;
+  right: 0px;
+  left: 10px;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0 0 17px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.inst-container .user-fr::before {
+  content: "frnd_msg: ";
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inst-container.music {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inst-container.music .inst-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.inst-container.music .inst-txt p {
+  margin: 0;
+  text-transform: uppercase;
 }

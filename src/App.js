@@ -1,24 +1,25 @@
-import logo from "./logo.svg";
+import React, { useEffect, useState } from "react";
 import "./App.css";
+import content from "./content";
+import contentExample from "./contentExample";
+import Section from "./components/Section/Section";
 
 function App() {
+  const [input, setInput] = useState([]);
+
+  useEffect(() => {
+    const input = content.filter(({ appVersion }) => appVersion[0] >= 5)[0]
+      .input;
+
+    setInput([...input]);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {input.length
+        ? input.map((input, i) => <Section key={i} input={input} />)
+        : null}
+    </>
   );
 }
 
