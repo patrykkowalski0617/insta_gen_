@@ -4,7 +4,7 @@ import { ImgWrapper } from "./Img.styles";
 function Img({ data }) {
   return (
     <ImgWrapper>
-      <img src={require(`./img/${data.no}`)}></img>
+      <img src={require(`./img/${data.fileName}`)}></img>
     </ImgWrapper>
   );
 }

@@ -5,6 +5,7 @@ import {
   Avatar,
   Img,
   LargeCenterTxt,
+  CodeLyric,
 } from "../ContentTemplates";
 import { SectionWrapper, Id } from "./Section.styles";
 
@@ -12,6 +13,8 @@ const Section = ({ input }) => {
   const { id, contentTemplate, data } = input;
   const renderContent = (contentTemplate) => {
     switch (contentTemplate) {
+      case "code-lyric":
+        return <CodeLyric data={data} />;
       case "standard":
         return <Standard data={data} />;
       case "music":
