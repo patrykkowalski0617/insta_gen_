@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 import Terminal from "../../Terminal/Terminal";
 import { ContentWrapper } from "./Music.styles";
 
-function Music({ data, diagram }) {
+const Music = ({ data, diagram }) => {
   const terminalHTMLWrapper = useRef(null);
   const { title } = data;
 
   const lineLength = diagram[0].length;
   let lineNumber = 0;
-  const increaseLineNum = () => {
+  const incrementLineNum = () => {
     lineNumber++;
   };
   const howManyLinesInTitle = Math.ceil(title.length / lineLength);
@@ -39,7 +39,7 @@ function Music({ data, diagram }) {
                         {titleLetter && titleLetter !== " "
                           ? titleLetter
                           : diagramEl}
-                        {increaseLineNum()}
+                        {incrementLineNum()}
                       </>
                     );
                   })}
@@ -52,6 +52,6 @@ function Music({ data, diagram }) {
       </Terminal>
     </div>
   );
-}
+};
 
 export default Music;

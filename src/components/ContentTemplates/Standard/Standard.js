@@ -43,7 +43,7 @@ function Standard({ data }) {
       let minFontSize = 15;
       let maxFontSize = 50;
       while (minFontSize < maxFontSize) {
-        if (contentWrapper.offsetHeight < 300) {
+        if (contentWrapper.offsetHeight < 290) {
           contentWrapper.style.fontSize = minFontSize + "px";
         }
         minFontSize++;
